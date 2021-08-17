@@ -4,14 +4,15 @@
             <Label text="Home"/>
         </ActionBar>
 
-        <GridLayout>
+        <StackLayout>
             <Label class="info">
                 <FormattedString>
                     <Span class="fas" text.decode="&#xf135; "/>
                     <Span :text="message"/>
                 </FormattedString>
             </Label>
-        </GridLayout>
+            <Button text="Button" @tap="onButtonTap" />
+        </StackLayout>
     </Page>
 </template>
 
@@ -21,6 +22,11 @@
       message() {
         return "Blank {N}-Vue app";
       }
+    },
+    methods: {
+        onButtonTap() {
+            console.log("Yooo");
+        }
     }
   };
 </script>
